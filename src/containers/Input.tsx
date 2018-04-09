@@ -1,5 +1,5 @@
 import MaInput from '../components/Input/Input';
-import * as actions from '../actions/Input';
+import * as actions from '../actions/input'
 import { StoreState } from '../stores';
 import { connect, Dispatch } from 'react-redux';
 

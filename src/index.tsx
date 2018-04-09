@@ -7,7 +7,8 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { enthusiasm } from './reducers';
 import { StoreState } from './stores';
-import Input from './containers/Input'
+import App from './App'
+// import Input from './containers/Input'
 
 const store = createStore<StoreState>(enthusiasm, {
     value: 1
@@ -15,7 +16,7 @@ const store = createStore<StoreState>(enthusiasm, {
 
 ReactDOM.render(
     <Provider store={store}>
-        <Input/>
+        <App/>
     </Provider>,
     document.getElementById('root') as HTMLElement
 );

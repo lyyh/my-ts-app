@@ -1,7 +1,7 @@
 ## my-ts-app
 
 ### 使用说明
-`npm start` 开发
+`npm start` 开发  
 `npm build` 打包
 
 ### 支持特性

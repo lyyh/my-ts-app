@@ -7,10 +7,16 @@ export interface P {
     onDecrement?: () => void
 }
 
+// helper
+const inputValueHelper = (value: number): string => {
+    return `the result is ${value}`
+}
+
 const MaInput = ({ value, onIncrement, onDecrement }: P) => {
+    const iptValue = inputValueHelper(value)
     return (
         <div>
-            <input type="text" value={value}/>
+            <input type="text" value={iptValue}/>
             <div>
                 <button onClick={onIncrement}>increment + </button>
                 <button onClick={onDecrement}>decrement - </button>
@@ -20,3 +26,5 @@ const MaInput = ({ value, onIncrement, onDecrement }: P) => {
 }
 
 export default MaInput;
+
+// test
