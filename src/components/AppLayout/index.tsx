@@ -9,12 +9,12 @@ export interface AppLayoutProps {}
 
 class AppLayout extends React.Component<AppLayoutProps, object> {
     state = {
-        currentKey: 'icon'
+        selectedKey: 'icon'
     }
     handleSwitchMenu = (target: any) => {
         const {key} = target
         this.setState({
-            currentKey: key
+            selectedKey: key
         })
     }
     MenuController = (key) => {
@@ -22,13 +22,13 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
             case 'icon':
                 return <MAntdIcon type={'link'} spin={true}/>
             case 'button':
-                return <MAntdButton/>
+                return <MAntdButton htmlType={'submit'}>测试</MAntdButton>
             default:
                 return <MAntdIcon type={'link'} spin={true}/>
         }
     }
     render() {
-        const {currentKey} = this.state
+        const {selectedKey} = this.state
         return (
             <Layout>
                 <Header className="header">
@@ -81,7 +81,7 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
                         </Breadcrumb>
                         <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
                             {
-                                this.MenuController(currentKey)
+                                this.MenuController(selectedKey)
                             }
                         </Content>
                     </Layout>

@@ -110,6 +110,7 @@ export default class Button extends React.Component<ButtonProps, object> {
             clearTimeout(this.delayTimeout);
         }
 
+        // delay 秒之后触发loading
         if (typeof loading !== 'boolean' && loading && loading.delay) {
             this.delayTimeout = window.setTimeout(() => this.setState({ loading }), loading.delay);
         } else {
@@ -122,6 +123,7 @@ export default class Button extends React.Component<ButtonProps, object> {
     }
 
     componentWillUnmount() {
+        // 清除定时器
         if (this.timeout) {
             clearTimeout(this.timeout);
         }
