@@ -5,6 +5,9 @@
   "dependencies": {
     "@types/react-redux": "^5.0.15",
     "antd": "^3.4.0",
+    "classnames": "^2.2.5",
+    "omit.js": "^1.0.0",
+    "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-redux": "^5.0.7",

@@ -7,6 +7,7 @@ export interface P {
 
 const MyDecorator = () => {
     // target 表示 MAHello React组件类，所以类型为object
+    // 装饰器 TypedPropertyDescriptor 类型
     return (target: object, key: string, descriptor: TypedPropertyDescriptor<Function>) => {
         let fn = descriptor.value
         if (fn) {
