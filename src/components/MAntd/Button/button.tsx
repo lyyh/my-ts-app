@@ -7,6 +7,7 @@ import Icon from '../Icon';
 import Group from './button-group';
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
+// 匹配两个中文字符
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
 function isString(str: any) {
     return typeof str === 'string';
@@ -149,6 +150,7 @@ export default class Button extends React.Component<ButtonProps, object> {
         }
     }
 
+    // 点击效果
     handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         // Add click effect
         this.setState({ clicked: true });

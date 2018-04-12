@@ -26,13 +26,10 @@ const ButtonGroup: React.SFC<ButtonGroupProps> = (props) => {
             break;
     }
 
-    const classes = classNames(
-        prefixCls,
-        {
+    const classes = classNames(prefixCls, {
             [`${prefixCls}-${sizeCls}`]: sizeCls,
         },
-        className
-    );
+        className);
 
     return <div {...others} className={classes} />;
 };

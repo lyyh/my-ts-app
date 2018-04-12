@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import MAntdIcon from '../MAntd/Icon'
-import MAntdButton from '../MAntd/Button'
+import { MButton, MButtonGroup, MIcon } from '../MAntd';
+
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
@@ -20,11 +20,13 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
     MenuController = (key) => {
         switch (key) {
             case 'icon':
-                return <MAntdIcon type={'link'} spin={true}/>
+                return MIcon
             case 'button':
-                return <MAntdButton htmlType={'submit'}>测试</MAntdButton>
+                return MButton
+            case 'buttonGroup':
+                return MButtonGroup
             default:
-                return <MAntdIcon type={'link'} spin={true}/>
+                return MIcon
         }
     }
     render() {
@@ -56,7 +58,7 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
                             <SubMenu key="sub1" title={<span><Icon type="user" />基础组件</span>}>
                                 <Menu.Item key="icon">Icon</Menu.Item>
                                 <Menu.Item key="button">Button</Menu.Item>
-                                <Menu.Item key="3">option3</Menu.Item>
+                                <Menu.Item key="buttonGroup">ButtonGroup</Menu.Item>
                                 <Menu.Item key="4">option4</Menu.Item>
                             </SubMenu>
                             <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
