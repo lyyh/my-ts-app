@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import { MButton, MButtonGroup, MIcon } from '../MAntd';
+import { MButton, MButtonGroup, MIcon, MInput } from '../MAntd';
+import { CusButtonGroup } from '../MAntd/custom-index';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -25,6 +26,10 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
                 return MButton
             case 'buttonGroup':
                 return MButtonGroup
+            case 'input':
+                return MInput
+            case 'cusButtonGroup':
+                return CusButtonGroup
             default:
                 return MIcon
         }
@@ -59,10 +64,10 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
                                 <Menu.Item key="icon">Icon</Menu.Item>
                                 <Menu.Item key="button">Button</Menu.Item>
                                 <Menu.Item key="buttonGroup">ButtonGroup</Menu.Item>
-                                <Menu.Item key="4">option4</Menu.Item>
+                                <Menu.Item key="input">input</Menu.Item>
                             </SubMenu>
-                            <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
-                                <Menu.Item key="5">option5</Menu.Item>
+                            <SubMenu key="sub2" title={<span><Icon type="laptop" />自定义组件</span>}>
+                                <Menu.Item key="cusButtonGroup">ButtonGroup</Menu.Item>
                                 <Menu.Item key="6">option6</Menu.Item>
                                 <Menu.Item key="7">option7</Menu.Item>
                                 <Menu.Item key="8">option8</Menu.Item>

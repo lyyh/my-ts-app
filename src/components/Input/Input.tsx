@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Input.scss';
+import './Input.css';
 
 export interface P {
     readonly value: number

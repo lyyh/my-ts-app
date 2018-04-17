@@ -37,6 +37,7 @@ function insertSpace(child: React.ReactChild, needInserted: boolean) {
 export type ButtonType = 'primary' | 'ghost' | 'dashed' | 'danger';
 export type ButtonShape = 'circle' | 'circle-outline';
 export type ButtonSize = 'small' | 'default' | 'large';
+// export type ButtonHtmlType = 'submit' | 'button' | 'reset'
 
 export interface ButtonProps {
     type?: ButtonType;
@@ -190,6 +191,7 @@ export default class Button extends React.Component<ButtonProps, object> {
                 break;
         }
 
+        // a标签 或者 button标签
         const ComponentProp = others.href ? 'a' : 'button';
 
         const classes = classNames(prefixCls, className, {
