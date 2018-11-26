@@ -2,7 +2,9 @@ import * as React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import { MButton, MButtonGroup, MIcon, MInput } from '../MAntd';
 import { CusButtonGroup } from '../MAntd/custom-index';
-
+import { Example, ExampleWr } from '../Example'
+// import Hello from '../Hello'
+import Foo from '../Foo/Foo'
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
@@ -20,6 +22,8 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
     }
     MenuController = (key) => {
         switch (key) {
+            case 'foo':
+                return <Foo/>
             case 'icon':
                 return MIcon
             case 'button':
@@ -30,6 +34,10 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
                 return MInput
             case 'cusButtonGroup':
                 return CusButtonGroup
+            case 'example':
+                return Example
+            case 'exampleWrapper':
+                return ExampleWr
             default:
                 return MIcon
         }
@@ -68,15 +76,12 @@ class AppLayout extends React.Component<AppLayoutProps, object> {
                             </SubMenu>
                             <SubMenu key="sub2" title={<span><Icon type="laptop" />自定义组件</span>}>
                                 <Menu.Item key="cusButtonGroup">ButtonGroup</Menu.Item>
-                                <Menu.Item key="6">option6</Menu.Item>
-                                <Menu.Item key="7">option7</Menu.Item>
+                                <Menu.Item key="example">example</Menu.Item>
+                                <Menu.Item key="exampleWrapper">exampleWrapper</Menu.Item>
                                 <Menu.Item key="8">option8</Menu.Item>
                             </SubMenu>
-                            <SubMenu key="sub3" title={<span><Icon type="notification" />subnav 3</span>}>
-                                <Menu.Item key="9">option9</Menu.Item>
-                                <Menu.Item key="10">option10</Menu.Item>
-                                <Menu.Item key="11">option11</Menu.Item>
-                                <Menu.Item key="12">option12</Menu.Item>
+                            <SubMenu key="sub3" title={<span><Icon type="notification" />typescript</span>}>
+                                <Menu.Item key="foo">类型注解</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Sider>
